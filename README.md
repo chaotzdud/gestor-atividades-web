@@ -52,13 +52,7 @@ Este projeto consiste no desenvolvimento de um sistema de gestão de atividades,
 
 ---
 
-Perfeito! Com base no texto do enunciado, aqui está a seção de **Arquitetura de Software** escrita de forma clara, objetiva e padronizada pro seu `README.md`:
-
----
-
 ## **Arquitetura de Software**
-
-A arquitetura do sistema segue os princípios fundamentais da **arquitetura web**, com ênfase na separação entre **frontend** e **backend**, e no uso de padrões modernos de comunicação entre cliente e servidor.
 
 ### **Tecnologias Utilizadas**
 
