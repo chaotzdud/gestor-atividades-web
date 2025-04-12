@@ -1,4 +1,4 @@
-CREATE TABLE User (
+CREATE TABLE `users` (
     id INT AUTO_INCREMENT PRIMARY KEY,
     fname VARCHAR(100) NOT NULL,
     lname VARCHAR(100) NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE User (
     password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE Activity (
+CREATE TABLE `activities` (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(200) NOT NULL,
     description TEXT,
