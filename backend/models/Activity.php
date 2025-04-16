@@ -6,6 +6,7 @@ class Activity {
     public $id;
     public $title;
     public $description;
+    public $status;
     public $author_id;
     public $created_at;
     public $due_date;
@@ -23,10 +24,11 @@ class Activity {
 
     public function create() {
         $query = "INSERT INTO " . $this->table . " 
-                  SET title=:title, description=:description, author_id=:author_id, due_date=:due_date";
+                  SET title=:title, description=:description, status=:status, author_id=:author_id, due_date=:due_date";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":title", $this->title);
         $stmt->bindParam(":description", $this->description);
+        $stmt->bindParam(":status", $this->status);
         $stmt->bindParam(":author_id", $this->author_id);
         $stmt->bindParam(":due_date", $this->due_date);
         return $stmt->execute();

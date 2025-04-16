@@ -10,10 +10,10 @@ $db = $database->connect();
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $requestUri = $_SERVER["REQUEST_URI"];
 
-if (preg_match("/\/users/", $requestUri)) {
+if (preg_match("/\/api\/users/", $requestUri)) {
     $controller = new UserController($db, $requestMethod);
     $controller->processRequest();
-} elseif (preg_match("/\/activities/", $requestUri)) {
+} elseif (preg_match("/\/api\/activities/", $requestUri)) {
     $controller = new ActivityController($db, $requestMethod);
     $controller->processRequest();
 } else {

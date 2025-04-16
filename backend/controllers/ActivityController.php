@@ -37,6 +37,7 @@ class ActivityController {
         $activity = new Activity($this->db);
         $activity->title = $data['title'] ?? '';
         $activity->description = $data['description'] ?? '';
+        $activity->status = $data['status'] ?? '';
         $activity->author_id = $data['author_id'] ?? null;
         $activity->due_date = $data['due_date'] ?? null;
 
