@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Atividades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Bem-vindo</h2>
+    </div>
+
+    <div class="tabs">
+      <div class="tab">Criar atividade</div>
+      <div class="tab">Lista de atividades</div>
+    </div>
+
+    <div class="content">
+      <form class="form" method="post" action="#">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" name="titulo">
+
+        <label for="data">Data de conclusão prevista</label>
+        <input type="date" id="conclusao" name="conclusao" placeholder="    /       /  ">
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descricao" maxlength="304"></textarea>
+
+        <button type="submit">Criar</button>
+      </form>
+
+      <div class="lista">
+        <div class="atividade">
+          <input type="checkbox">
+          <div class="atividade-info tooltip">
+            <span>Título da atividade</span>
+            <div class="tooltip-text">
+              Descrição da atividade <br>
+              <small>01/01/2026</small>
+            </div>
+          </div>
+          <div class="botoes-atividade">
+            <button class="delete">&#x2716;</button>
+            <button class="edit">&#x270E;</button>
+          </div>
+        </div>
+
+        <div class="atividade">
+          <input type="checkbox">
+          <div class="atividade-info tooltip">
+            <span>Título da atividade</span>
+            <div class="tooltip-text">
+              Descrição da atividade <br>
+              <small>01/01/2026</small>
+            </div>
+          </div>
+          <div class="botoes-atividade">
+            <button class="delete">&#x2716;</button>
+            <button class="edit">&#x270E;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-buttons">
+    <button class="creditos">Créditos</button>
+    <button class="sair">Sair</button>
+  </div>
+</body>
+</html>
