@@ -80,14 +80,14 @@ body {
     height: 40px;
 }
 
-.btn-cadastrar {
+.btn-signup {
     background-color: transparent;
     color: black;
     border: 1px solid #D8D8D8;
     font-weight: normal;
 }
 
-.btn-criar {
+.btn-signin {
     background-color: #50B25F;
     color: white;
     font-weight: normal;

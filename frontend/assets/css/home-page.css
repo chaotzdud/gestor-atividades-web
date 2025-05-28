@@ -100,11 +100,11 @@ html, body {
       cursor: pointer;
     }
 
-    .lista {
+    .list {
       flex: 1;
     }
 
-    .atividade {
+    .activity {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -112,12 +112,12 @@ html, body {
       border-bottom: 1px solid #eee;
     }
 
-    .atividade span {
+    .activity span {
       flex: 1;
       margin-left: 0.5rem;
     }
 
-    .botoes-atividade button {
+    .buttons-activity button {
       background: none;
       border: none;
       cursor: pointer;
@@ -149,12 +149,12 @@ html, body {
       cursor: pointer;
     }
 
-    .creditos {
+    .credits {
       background-color: #50B25F;
       color: white;
     }
 
-    .sair {
+    .exit {
       background-color: #d9534f;
       color: white;
     }
@@ -192,7 +192,7 @@ html, body {
   opacity: 1;
 }
 
-.atividade-info {
+.activity-info {
   flex: 1;
   text-align: left;
 }

@@ -18,17 +18,17 @@ body {
     padding: 2rem; 
 }
 
-.img-nome {
+.img-name {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
 }
 
-.img-nome img {
+.img-name img {
     width: 30%;
 }
 
-.nome {
+.name {
     font-size: 1;
     font-weight: normal;
 }
@@ -83,7 +83,7 @@ body {
     height: 40px;
 }
 
-.btn-voltar {
+.btn-back {
     background-color: transparent;
     color: black;
     border: 1px solid #D8D8D8;

@@ -94,14 +94,14 @@ body {
     width: 100%;
 }
 
-.btn-cancelar {
+.btn-cancel {
     background-color: transparent;
     color: black;
     border: 1px solid #D8D8D8;
     font-weight: normal;
 }
 
-.btn-aplicar {
+.btn-apply {
     background-color: #50B25F;
     color: white;
     font-weight: normal;

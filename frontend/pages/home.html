@@ -1,33 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de activitys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/home-page.css">
 </head>
+
 <body>
-    <h1>Home</h1>
+  <div class="container">
+    <div class="header">
+      <h2>Bem-vindo</h2>
+    </div>
 
-    <hr>
+    <div class="tabs">
+      <div class="tab">Criar atividade</div>
+      <div class="tab">Lista de atividades</div>
+    </div>
 
-    <h2> Criar Atividade</h2>
+    <div class="content">
+      <form class="form" method="post" action="">
+        <label for="title">Título</label>
+        <input type="text" id="title" name="title">
 
-    <form action="#">
-        <label for="title">Título:</label> <br>
-        <input type="text" id="title" name="title" required> <br><br>
+        <label for="due_date">Data de conclusão prevista</label>
+        <input type="date" id="conclusao" name="due_date">
 
-        <label for="description">Descrição:</label> <br>
-        <input type="text" id="description" name="description" required> <br><br>
+        <label for="description">Descrição</label>
+        <textarea id="description" name="description" maxlength="304"></textarea>
 
-        <label for="due_date">Data de Conclusão (Prevista):</label> <br>
-        <input type="date" id="due_date" name="due_date" required> <br><br>
+        <button type="submit">Criar</button>
+      </form>
 
-        <input type="submit" value="Criar">
-    </form>
+      <div class="list">
+        <div class="activity">
+          <input type="checkbox">
+          <div class="activity-info tooltip">
+            <span>Título da atividade</span>
+            <div class="tooltip-text">
+              Descrição da actividade <br>
+              <small>01/01/2026</small>
+            </div>
+          </div>
+          <div class="buttons-activity">
+            <button class="delete">&#x2716;</button>
+            <button class="edit">&#x270E;</button>
+          </div>
+        </div>
 
+        <div class="activity">
+          <input type="checkbox">
+          <div class="activity-info tooltip">
+            <span>Título da activity</span>
+            <div class="tooltip-text">
+              Descrição da activity <br>
+              <small>01/01/2026</small>
+            </div>
+          </div>
+          <div class="buttons-activity">
+            <button class="delete">&#x2716;</button>
+            <button class="edit">&#x270E;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <hr>
-
-    <h2>Lista de Atividades</h2>
+  <div class="footer-buttons">
+    <button class="credits">Créditos</button>
+    <button class="exit">Sair</button>
+  </div>
 </body>
 </html>

@@ -81,14 +81,14 @@ body {
     height: 40px;
 }
 
-.btn-voltar {
+.btn-back {
     background-color: transparent;
     color: black;
     border: 1px solid #D8D8D8;
     font-weight: normal;
 }
 
-.btn-cadastrar {
+.btn-signup {
     background-color: #50B25F;
     color: white;
     font-weight: normal;
