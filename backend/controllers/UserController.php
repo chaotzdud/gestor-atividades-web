@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/../controllers/UserController.php';
 require_once __DIR__ .'/../models/User.php';
 
 class UserController {
@@ -11,10 +10,14 @@ class UserController {
         $this->requestMethod = $requestMethod;
     }
 
-    public function processRequest() {
+    public function processRequest($userId = null) {
         switch ($this->requestMethod) {
             case 'GET':
-                $this->getUsers();
+                if($userId) {
+                    $this->getUserById($userId);
+                } else {
+                    $this->getUsers();
+                }
                 break;
             case 'POST':
                 $this->createUser();
@@ -30,6 +33,19 @@ class UserController {
         $stmt = $user->readAll();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo json_encode($users);
+    }
+
+    private function getUserById($id) {
+        $user = new User($this->db);
+        $stmt = $user->readById($id);
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($data) {
+            echo json_encode($data);
+        } else {
+            http_response_code(404);
+            echo json_encode(["message" => "Usuário não encontrado"]);
+        }
     }
 
     private function createUser() {

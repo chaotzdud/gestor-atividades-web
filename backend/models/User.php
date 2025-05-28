@@ -20,6 +20,15 @@ class User {
         return $stmt;
     }
 
+    public function readById($id) {
+        $query = "SELECT * FROM " . $this->table . " WHERE id = :id LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt;
+    }
+
+
     public function create() {
         $query = "INSERT INTO " . $this->table . " SET fname=:fname, lname=:lname, dbirth=:dbirth, username=:username, password=:password";
         $stmt = $this->conn->prepare($query);
