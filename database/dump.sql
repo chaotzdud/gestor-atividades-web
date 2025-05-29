@@ -11,7 +11,7 @@ CREATE TABLE `activities` (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(200) NOT NULL,
     description TEXT,
-    status TEXT,
+    status BOOLEAN,
     author_id INT NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     due_date DATETIME,

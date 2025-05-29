@@ -65,4 +65,35 @@ class UserController {
             echo json_encode(["message" => "Erro ao criar usuário"]);
         }
     }
+
+    public function login() {
+        $data = json_decode(file_get_contents("php://input"), true);
+    
+        if (empty($data['username']) || empty($data['password'])) {
+            http_response_code(400);
+            echo json_encode(["message" => "Usuário e senha são obrigatórios"]);
+            return;
+        }
+    
+        $user = new User($this->db);
+        $stmt = $user->readByUsername($data['username']);
+        $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        if ($userData && password_verify($data['password'], $userData['password'])) {
+            http_response_code(200);
+            echo json_encode([
+                "message" => "Login bem-sucedido",
+                "user" => [
+                    "id" => $userData['id'],
+                    "fname" => $userData['fname'],
+                    "lname" => $userData['lname'],
+                    "username" => $userData['username']
+                ]
+            ]);
+        } else {
+            http_response_code(401);
+            echo json_encode(["message" => "Credenciais inválidas"]);
+        }
+    }
+    
 }

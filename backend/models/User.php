@@ -39,4 +39,13 @@ class User {
         $stmt->bindParam(":password", $this->password);
         return $stmt->execute();
     }
+
+    public function readByUsername($username) {
+        $query = "SELECT * FROM " . $this->table . " WHERE username = :username LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+        return $stmt;
+    }
+    
 }

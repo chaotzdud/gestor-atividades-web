@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (response.ok) {
         alert('Usuário cadastrado com sucesso!');
-        window.location.href = '/gestor-atividades-web/signup.html';
+        window.location.href = '/gestor-atividades-web/frontend/pages/signin.html';
       } else {
         alert(result.message || 'Erro ao cadastrar');
       }
