@@ -50,15 +50,52 @@ Este projeto consiste no desenvolvimento de um sistema de gestão de atividades,
 
 ![DER](./db/der.png)
 
+### **Script do banco de dados**
+
+```sql
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  fname VARCHAR(100),
+  lname VARCHAR(100),
+  dbirth DATE,
+  username VARCHAR(50) UNIQUE,
+  password VARCHAR(255)
+);
+
+CREATE TABLE activities (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    due_date DATE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('pending', 'done') DEFAULT 'pending',
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+```
+
 ---
 
 ## **Arquitetura de Software**
 
-### **Tecnologias Utilizadas**
+### **Ferramentas Utilizadas**
 
 - **Backend:** PHP puro (sem frameworks)
 - **Frontend:** HTML, CSS e JavaScript 
 - **Banco de Dados:** MySQL (via XAMPP)
 - **Comunicação:** Requisições AJAX utilizando o formato **JSON**
-- **Autenticação:** Web Auth (BASIC ou JWT)
-- **Sessões:** O uso ou não será definido com base na abordagem escolhida, considerando a segurança e a simplicidade da implementação.
+
+### **Estrutura de Pastas**
+
+```
+gestor-atividades-web/
+│── api/                # Manipulação de dados da API
+│── db/                 # Configurações do banco de dados
+│── public/             # Front-end
+|   │── assets/         # Recursos adicionais
+|   |   │── css/        # Arquivos CSS
+|   |   │── images/     # Imagens
+|   │── js/             # Integração da API com o front-end
+│── index.php           # Ponto de entrada da aplicação
+│── README.md           # Descrição do projeto
+```
