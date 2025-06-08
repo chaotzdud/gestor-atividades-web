@@ -5,14 +5,15 @@ Este projeto consiste no desenvolvimento de um sistema de gestão de atividades,
 
 ---
 
-## **Fluxo de Desenvolvimento do Projeto**
+## **1. Fluxo de Desenvolvimento do Projeto**
 
 - Levantamento de Requisitos (com base nas instruções fornecidas pelo professor)
 - Modelagem de Dados
-- Definição da Arquitetura de Software e Design Patterns
-- Criação da Interface de Usuário
+- Criação da API (back-end)
+- Criação das páginas (front-end)
+- Integração da API com as páginas (AJAX)
 
-## **Levantamento de Requisitos**
+## **2. Levantamento de Requisitos**
 
 | ID  | Descrição                                                                                                                                 | Tipo |
 |-----|-------------------------------------------------------------------------------------------------------------------------------------------|------|
@@ -29,16 +30,16 @@ Este projeto consiste no desenvolvimento de um sistema de gestão de atividades,
 
 ---
 
-## **Modelagem de Dados**
+## 3. **Modelagem de Dados**
 
-### **Usuário**
+### **3.1. Usuário**
 - Nome
 - Sobrenome
 - Data de Nascimento
 - Nome de Usuário
 - Senha
 
-### **Atividade**
+### **3.2. Atividade**
 - Título
 - Descrição
 - Autor
@@ -46,11 +47,11 @@ Este projeto consiste no desenvolvimento de um sistema de gestão de atividades,
 - Data de Criação (gerada automaticamente)
 - Status ("Em aberto" / "Concluída")
 
-### **Diagrama Entidade-Relacionamento**
+### **3.3. Diagrama Entidade-Relacionamento**
 
 ![DER](./db/der.png)
 
-### **Script do banco de dados**
+### **3.4. Script do banco de dados**
 
 ```sql
 CREATE TABLE users (
@@ -76,16 +77,16 @@ CREATE TABLE activities (
 
 ---
 
-## **Arquitetura de Software**
+## **4. Arquitetura de Software**
 
-### **Ferramentas Utilizadas**
+### **4.1. Ferramentas Utilizadas**
 
 - **Backend:** PHP puro (sem frameworks)
 - **Frontend:** HTML, CSS e JavaScript 
 - **Banco de Dados:** MySQL (via XAMPP)
 - **Comunicação:** Requisições AJAX utilizando o formato **JSON**
 
-### **Estrutura de Pastas**
+### **4.2. Estrutura de Pastas**
 
 ```
 gestor-atividades-web/
