@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/signin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Acessar conta</h2>
+        </div>
+        <div class="content">
+            <form class="form" id="signin-form">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="signin">Senha</label>
+                <input type="password" id="password" name="password" required>
+                
+                <div class="button-group">
+                    <button type="button" class="btn btn-signup">Cadastrar</button>
+                    <button type="submit" class="btn btn-signin">Entrar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="js/signin.js"></script>
+</body>
+</html>
+
+<script>
+  document.querySelector('.btn-signup').addEventListener('click', function () {
+    window.location.href = 'signup.html';
+  });
+</script>

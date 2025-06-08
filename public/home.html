@@ -1,0 +1,107 @@
+<script>
+fetch('../api/check_auth.php')
+  .then(res => res.json())
+  .then(data => {
+    if (!data.authenticated) {
+      window.location.href = 'signin.html';
+    }
+  });
+</script>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela Principal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Bem-vindo</h2>
+    </div>
+
+    <div class="tabs">
+      <div class="tab">Criar atividade</div>
+      <div class="tab">Lista de atividades</div>
+    </div>
+
+    <div class="content">
+      <form class="form">
+        <label for="title">Título</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="due_date">Data de conclusão prevista</label>
+        <input type="date" id="conclusao" name="due_date" required>
+
+        <label for="description">Descrição</label>
+        <textarea id="description" name="description" maxlength="304" required></textarea>
+
+        <button type="submit">Criar</button>
+      </form>
+
+      <div class="list">
+        <div class="activity">
+          <input type="checkbox">
+          <div class="activity-info tooltip">
+            <span>Título da atividade</span>
+            <div class="tooltip-text">
+              Descrição da atividade <br>
+              <small>01/01/2026</small>
+            </div>
+          </div>
+          <div class="buttons-activity">
+            <button class="delete">&#x2716;</button>
+            <button class="edit">&#x270E;</button>
+          </div>
+        </div>
+
+        <div class="activity">
+          <input type="checkbox">
+          <div class="activity-info tooltip">
+            <span>Título da atividade</span>
+            <div class="tooltip-text">
+              Descrição da atividade <br>
+              <small>01/01/2026</small>
+            </div>
+          </div>
+          <div class="buttons-activity">
+            <button class="delete">&#x2716;</button>
+            <button class="edit">&#x270E;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-buttons">
+    <button class="credits">Créditos</button>
+    <button class="exit">Sair</button>
+  </div>
+
+  <script src="./js/home.js"></script>
+</body>
+</html>
+
+<script>
+  document.querySelector('.credits').addEventListener('click', function () {
+    window.location.href = 'credits.html';
+  });
+
+  document.querySelector(".exit").addEventListener("click", function () {
+    fetch("../api/logout.php", {
+      method: "POST"
+    })
+    .then(res => res.json())
+    .then(response => {
+      if (response.success) {
+        window.location.href = "signin.html";
+      }
+    });
+  });
+</script>
+
+

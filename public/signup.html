@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Criar conta</h2>
+        </div>
+        <div class="content">
+            <form class="form" id="signup-form">
+                <label for="fname">Nome</label>
+                <input type="text" id="fname" name="fname" required>
+
+                <label for="lname">Sobrenome</label>
+                <input type="text" id="lname" name="lname" required>
+
+                <label for="dbirth">Data de nascimento</label>
+                <input type="date" id="dbirth" name="dbirth" required>
+
+                <label for="username">Nome de usuário</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+                
+                <div class="button-group">
+                    <button type="button" class="btn btn-back">Voltar</button>
+                    <button type="submit" class="btn btn-signup">Cadastrar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="js/signup.js"></script>
+</body>
+</html>
+
+<script>
+  document.querySelector('.btn-back').addEventListener('click', function () {
+    window.location.href = 'signin.html';
+  });
+</script>

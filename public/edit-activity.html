@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Atividades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/edit-activity.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Editar atividade</h2>
+            </div>
+            
+            <div class="content">
+                <form class="form">
+                    <label for="title">Título</label>
+                    <input type="text" id="title" name="title">
+
+                    <label for="due_date"> Data de conclusão prevista</label>
+                    <input type="date" id="due_date" name="due_date" placeholder="    /       /  ">
+
+                    <label for="description">Descrição</label>
+                    <textarea id="description" name="description" maxlength="304"></textarea>
+                    
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-apply">Aplicar alterações</button>
+                        <button type="submit" class="btn btn-cancel">Cancelar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+      <script src="./js/edit-activity.js"></script>
+    </body>
+</html>
