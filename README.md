@@ -45,7 +45,7 @@ Este projeto consiste no desenvolvimento de um sistema de gestão de atividades,
 - Autor
 - Data de Conclusão (definida pelo usuário)
 - Data de Criação (gerada automaticamente)
-- Status ("Em aberto" / "Concluída")
+- Status ("Pendente" / "Concluída")
 
 ### **3.3. Diagrama Entidade-Relacionamento**
 
