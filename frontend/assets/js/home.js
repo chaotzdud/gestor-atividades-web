@@ -92,7 +92,7 @@ function renderActivities(activities) {
     checkbox.addEventListener('change', () => {
     const newStatus = checkbox.checked ? 'done' : 'pending';
 
-    fetch('gestor-atividades-web/backend/activities/update_activity_status.php', {
+    fetch('/gestor-atividades-web/backend/activities/update_activity_status.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: activity.id, status: newStatus })
