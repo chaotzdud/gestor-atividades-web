@@ -6,7 +6,7 @@ document.getElementById("signin-form").addEventListener("submit", function (e) {
     password: document.getElementById("password").value,
   };
 
-  fetch("../api/login.php", {
+  fetch("/gestor-atividades-web/api/login.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)

@@ -45,7 +45,7 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  fetch('../api/create_activity.php', {
+  fetch('/gestor-atividades-web/api/create_activity.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)

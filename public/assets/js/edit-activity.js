@@ -14,7 +14,7 @@ if (!activityId) {
 const form = document.querySelector('.form');
 
 // Carrega dados da atividade para editar
-fetch(`../api/get_activity.php?id=${activityId}`)
+fetch(`/gestor-atividades-web/api/get_activity.php?id=${activityId}`)
   .then(res => res.json())
   .then(data => {
     if (!data.success) {
