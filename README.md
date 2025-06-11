@@ -20,11 +20,11 @@ Este projeto consiste no desenvolvimento de um sistema de gestão de atividades,
 | 2   | O sistema deve permitir que um usuário faça login com seu nome de usuário e senha.                                                       | F    |
 | 3   | O sistema deve permitir que um usuário faça logout de sua conta.                                                                         | F    |
 | 4   | O sistema deve permitir que um usuário crie uma atividade, informando título, descrição e data de conclusão.                             | F    |
-| 5   | O sistema deve registrar automaticamente a data de criação de uma atividade.                                                             | NF   |
+| 5   | O sistema deve registrar automaticamente a data de criação de uma atividade.                                                             | F   |
 | 6   | O sistema deve definir o status inicial de uma atividade como "Em aberto".                                                               | F    |
 | 7   | O sistema deve permitir que um usuário edite os dados de uma atividade.                                                                  | F    |
 | 8   | O sistema deve permitir que um usuário altere o status de uma atividade para "Concluída".                                                | F    |
-| 9   | O sistema deve permitir que apenas usuários autenticados acessem e editem seus próprios dados.                                           | NF   |
+| 9   | O sistema deve permitir que apenas usuários autenticados acessem e editem seus próprios dados.                                           | F   |
 | 10  | O sistema deve garantir que as atividades só possam ser acessadas por seus respectivos autores.                                          | F    |
 
 ---
