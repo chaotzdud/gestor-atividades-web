@@ -14,7 +14,7 @@ if (!activityId) {
 const form = document.querySelector('.form');
 
 // Carrega dados da atividade para editar
-fetch(`/gestor-atividades-web/api/get_activity.php?id=${activityId}`)
+fetch(`/gestor-atividades-web/backend/activities/get_activity.php?id=${activityId}`)
   .then(res => res.json())
   .then(data => {
     if (!data.success) {
@@ -50,7 +50,7 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  fetch('../api/update_activity.php', {
+  fetch('/gestor-atividades-web/backend/activities/update_activity.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)

@@ -1,11 +1,11 @@
 <?php
-require_once 'includes/session.php';
+require_once '/backend/includes/session.php';
 
 startSecureSession();
 
 if (isUserLoggedIn()) {
-    header('Location: public/home.html');
+    header('Location: frontend/home.html');
 } else {
-    header('Location: public/signin.html');
+    header('Location: frontend/signin.html');
 }
 exit();

@@ -1,4 +1,4 @@
-fetch('../api/check_auth.php')
+fetch('/gestor-atividades-web/backend/auth/check_auth.php')
   .then(res => res.json())
   .then(data => {
     if (!data.authenticated) {
@@ -45,7 +45,7 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  fetch('/gestor-atividades-web/api/create_activity.php', {
+  fetch('/gestor-atividades-web/backend/activities/create_activity.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -61,7 +61,7 @@ form.addEventListener('submit', (e) => {
 });
 
 function loadActivities() {
-  fetch('../api/activities.php')
+  fetch('/gestor-atividades-web/backend/activities/activities.php')
     .then(res => res.json())
     .then(response => {
       if (!response.success) {
@@ -92,7 +92,7 @@ function renderActivities(activities) {
     checkbox.addEventListener('change', () => {
     const newStatus = checkbox.checked ? 'done' : 'pending';
 
-    fetch('../api/update_activity_status.php', {
+    fetch('gestor-atividades-web/backend/activities/update_activity_status.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: activity.id, status: newStatus })
@@ -137,7 +137,7 @@ function renderActivities(activities) {
 
     btnDelete.addEventListener('click', () => {
       if (confirm('Tem certeza que deseja deletar esta atividade?')) {
-        fetch('../api/delete_activity.php', {
+        fetch('/gestor-atividades-web/backend/activities/delete_activity.php', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id: activity.id })
@@ -183,7 +183,7 @@ document.querySelector('.credits').addEventListener('click', () => {
 });
 
 document.querySelector('.exit').addEventListener('click', () => {
-  fetch('../api/logout.php', { method: 'POST' })
+  fetch('/gestor-atividades-web/backend/auth/logout.php', { method: 'POST' })
     .then(res => res.json())
     .then(response => {
       if (response.success) {

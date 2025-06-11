@@ -1,4 +1,3 @@
-
 # **Gestor de Atividades Web**
 
 Este projeto consiste no desenvolvimento de um sistema de gestão de atividades, semelhante a um TODO App, para a disciplina de **Programação Web**, lecionada pelo prof. **Luis Felipe Feres**, no curso de **Análise e Desenvolvimento de Sistemas**, da **Faculdade de Tecnologia de Taubaté**.
@@ -90,13 +89,17 @@ CREATE TABLE activities (
 
 ```
 gestor-atividades-web/
-│── api/                # Manipulação de dados da API
-│── db/                 # Configurações do banco de dados
-│── public/             # Front-end
+│── backend/            # Lógica do back-end (API, autenticação, includes)
+|   │── activities/     # Manipulação de atividades (CRUD)
+|   │── auth/           # Autenticação de usuários (login, logout, cadastro)
+|   │── includes/       # Arquivos auxiliares (ex: sessão)
+│── db/                 # Configurações do banco de dados, DER, dump
+│── frontend/           # Front-end
 |   │── assets/         # Recursos adicionais
 |   |   │── css/        # Arquivos CSS
 |   |   │── images/     # Imagens
-|   │── js/             # Integração da API com o front-end
+|   |   │── js/         # Scripts JavaScript
+|   │── pages/          # Páginas HTML
 │── index.php           # Ponto de entrada da aplicação
 │── README.md           # Descrição do projeto
 ```

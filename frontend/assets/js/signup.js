@@ -9,7 +9,7 @@ document.getElementById("signup-form").addEventListener("submit", function (e) {
     password: document.getElementById("password").value
   };
 
-  fetch("/gestor-atividades-web/api/register.php", {
+  fetch("/gestor-atividades-web/backend/auth/register.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)

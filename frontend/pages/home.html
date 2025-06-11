@@ -1,5 +1,5 @@
 <script>
-fetch('../api/check_auth.php')
+fetch('/gestor-atividades-web/backend/auth/check_auth.php')
   .then(res => res.json())
   .then(data => {
     if (!data.authenticated) {
@@ -15,7 +15,7 @@ fetch('../api/check_auth.php')
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tela Principal</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="../assets/css/home.css">
 </head>
 
 <body>
@@ -58,7 +58,7 @@ fetch('../api/check_auth.php')
     <button class="exit">Sair</button>
   </div>
 
-  <script src="./assets/js/home.js"></script>
+  <script src="../assets/js/home.js"></script>
 </body>
 </html>
 
@@ -68,7 +68,7 @@ fetch('../api/check_auth.php')
   });
 
   document.querySelector(".exit").addEventListener("click", function () {
-    fetch("../api/logout.php", {
+    fetch("/gestor-atividades-web/backend/auth/logout.php", {
       method: "POST"
     })
     .then(res => res.json())
